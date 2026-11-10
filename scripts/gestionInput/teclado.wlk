@@ -11,16 +11,16 @@ object controlesJuego
     method configurar()
     {
         // control de movimiento del personaje con flechas
-        keyboard.right().onPressDo({ personaje.moverDerecha() })
-        keyboard.left().onPressDo({ personaje.moverIzquierda() })
-        keyboard.up().onPressDo({ personaje.moverArriba() })
-        keyboard.down().onPressDo({ personaje.moverAbajo() })
+        keyboard.right().whilePressedDo({ personaje.moverDerecha() })
+        keyboard.left().whilePressedDo({ personaje.moverIzquierda() })
+        keyboard.up().whilePressedDo({ personaje.moverArriba() })
+        keyboard.down().whilePressedDo({ personaje.moverAbajo() })
 
         // control de movimiento del personaje con AWSD
-        keyboard.d().onPressDo({ personaje.moverDerecha() })
-        keyboard.a().onPressDo({ personaje.moverIzquierda() })
-        keyboard.w().onPressDo({ personaje.moverArriba() })
-        keyboard.s().onPressDo({ personaje.moverAbajo() })
+        keyboard.d().whilePressedDo({ personaje.moverDerecha() })
+        keyboard.a().whilePressedDo({ personaje.moverIzquierda() })
+        keyboard.w().whilePressedDo({ personaje.moverArriba() })
+        keyboard.s().whilePressedDo({ personaje.moverAbajo() })
 
         // controles generales
         keyboard.space().onPressDo({personaje.ataque()})
