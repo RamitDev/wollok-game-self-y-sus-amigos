@@ -1,3 +1,4 @@
+import scripts.gestionObjetos.gestorObjetos.*
 import RecompensaIntento.*
 import RecompensaMejora.*
 import RecompensaMonedas.*
@@ -39,6 +40,7 @@ object gestorRecompensas
 
         if(not posibles.isEmpty())
             posibles.anyOne().apply()
+            
     }
 }
 
