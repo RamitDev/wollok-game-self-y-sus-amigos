@@ -1,3 +1,4 @@
+import scripts.personaje.personaje.*
 import scripts.gestionMejoras.gestorMejoras.*
 import scripts.gestionMenus.gestorPausa.*
 import scripts.gestionNiveles.gestorNivel.*
@@ -58,5 +59,6 @@ object exit2 {
         gestorNivel.cargarNivel(0)
         gestorMejoras.borrarTodasMejoras()
         menuMejoras.borrarMejoras()
+        personaje.reiniciarValores()
     }
 }

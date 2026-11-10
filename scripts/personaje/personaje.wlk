@@ -81,15 +81,19 @@ object personaje
             if(intentos <= 0)
             {
                 exit2.entrar()
-                self.monedas(0)
-                self.añadirMoneda(gestorNivel.monedasIniciales())
-                intentos = 2
             }
             else
                 gestorNivel.reiniciarNivel()
             moviendose = false
         })
 
+    }
+
+    method reiniciarValores() {
+        self.monedas(0)
+        intentos = 2
+        contadorIntentos.actualizar()
+        contadorMonedas.actualizar()
     }
 
     method intentosMaximos()
