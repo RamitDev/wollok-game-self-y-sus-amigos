@@ -11,16 +11,16 @@ object controlesJuego
     method configurar()
     {
         // control de movimiento del personaje con flechas
-        keyboard.right().whilePressedDo({ personaje.moverDerecha() })
-        keyboard.left().whilePressedDo({ personaje.moverIzquierda() })
-        keyboard.up().whilePressedDo({ personaje.moverArriba() })
-        keyboard.down().whilePressedDo({ personaje.moverAbajo() })
+        keyboard.right().onPressDo({ personaje.moverDerecha() })
+        keyboard.left().onPressDo({ personaje.moverIzquierda() })
+        keyboard.up().onPressDo({ personaje.moverArriba() })
+        keyboard.down().onPressDo({ personaje.moverAbajo() })
 
         // control de movimiento del personaje con AWSD
-        keyboard.d().whilePressedDo({ personaje.moverDerecha() })
-        keyboard.a().whilePressedDo({ personaje.moverIzquierda() })
-        keyboard.w().whilePressedDo({ personaje.moverArriba() })
-        keyboard.s().whilePressedDo({ personaje.moverAbajo() })
+        keyboard.d().onPressDo({ personaje.moverDerecha() })
+        keyboard.a().onPressDo({ personaje.moverIzquierda() })
+        keyboard.w().onPressDo({ personaje.moverArriba() })
+        keyboard.s().onPressDo({ personaje.moverAbajo() })
 
         // controles generales
         keyboard.space().onPressDo({personaje.ataque()})
@@ -36,16 +36,16 @@ object controlesMenu {
     method configurar() {
 
         // control de movimiento con flechas
-        keyboard.up().onPressDo        ({ gestorInput.up() })
-        keyboard.left().onPressDo      ({ gestorInput.left() })
-        keyboard.down().onPressDo      ({ gestorInput.down() })
-        keyboard.right().onPressDo     ({ gestorInput.right() })
+        keyboard.up().whilePressedDo        ({ gestorInput.up() }, 150)
+        keyboard.left().whilePressedDo     ({ gestorInput.left() }, 150)
+        keyboard.down().whilePressedDo      ({ gestorInput.down() }, 150)
+        keyboard.right().whilePressedDo     ({ gestorInput.right() }, 150)
 
         // control de movimiento con WASD
-        keyboard.w().onPressDo         ({ gestorInput.up() })
-        keyboard.a().onPressDo         ({ gestorInput.left() })
-        keyboard.s().onPressDo         ({ gestorInput.down() })
-        keyboard.d().onPressDo         ({ gestorInput.right() })
+        keyboard.w().whilePressedDo         ({ gestorInput.up() }, 150)
+        keyboard.a().whilePressedDo         ({ gestorInput.left() }, 150)
+        keyboard.s().whilePressedDo         ({ gestorInput.down() }, 150)
+        keyboard.d().whilePressedDo        ({ gestorInput.right() }, 150)
         
         // controles generales
         keyboard.enter().onPressDo     ({ gestorInput.enter() })
